@@ -1,0 +1,214 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+  
+  
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": {"longitude":8.848829204496038, "latitude": 45.31796606512312},
+          "location":"vigevano via mentana"
+        },
+        "properties": {
+          "name": "Racconto di Livio Cerri",
+          "index": 0,
+          "audioSrc":"url(./src/sounds/livio.mp3)",
+          "audioUrl":"./src/sounds/livio.mp3",
+          "description":"Stai ascoltando la testimonizanza<br> di Livio Cerri"
+        
+        }
+      },
+  
+  
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": {"longitude":8.850161797926482, "latitude": 45.31809989786112},
+          "location":"vigevano via mentana"
+        },
+        "properties": {
+          "name": "Su Aurelio Bernuzzi",
+          "index": 1,
+          "audioSrc":"url(./src/sounds/aurelio.mp3) ",
+          "audioUrl":"./src/sounds/aurelio.mp3 ",
+          "description":"Stai ascoltando il racconto <br> di Aurelio Bernuzzi"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": {"longitude":8.849544711306878, "latitude": 45.318104292297626},
+          "location":"vigevano via mentana"
+        },
+        "properties": {
+          "name": "La resa di Pavia",
+          "index": 2,
+          "audioSrc":"url(./src/sounds/Panzer.mp3) ",
+          "audioUrl":"./src/sounds/Panzer.mp3",
+          "description":"Stai ascoltando <br> La resa di Pavia"
+        
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": {"longitude":8.841242230963694, "latitude": 45.326468365157425},
+          "location":"vigevano CSO NOVARA"
+        },
+        "properties": {
+          "name": "Racconto di Livio Cerri",
+          "index": 0,
+          "audioSrc":"url(./src/sounds/livio.mp3)",
+          "audioUrl":"./src/sounds/livio.mp3",
+          "description":"Stai ascoltando la testimonizanza<br> di Livio Cerri"
+        
+        }
+      },
+  
+  
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": {"longitude":8.841420059982163, "latitude": 45.32631958759768},
+          "location":"vigevano CSO NOVARA"
+        },
+        "properties": {
+          "name": "Su Aurelio Bernuzzi",
+          "index": 1,
+          "audioSrc":"url(./src/sounds/aurelio.mp3) ",
+          "audioUrl":"./src/sounds/aurelio.mp3 ",
+          "description":"Stai ascoltando il racconto <br> di Aurelio Bernuzzi"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": {"longitude":8.84161675240691, "latitude": 45.32612173537992},
+          "location":"vigevano CSO NOVARA"
+        },
+        "properties": {
+          "name": "Racconto di Livio Cerri",
+          "index": 2,
+          "audioSrc":"url(./src/sounds/Panzer.mp3) ",
+          "audioUrl":"./src/sounds/Panzer.mp3",
+          "description":"Stai ascoltando <br> La resa di Pavia"
+        
+        }
+      },
+
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": {"longitude":9.225268269696395, "latitude":45.461674846577765},
+          "location":"Mialno Via Longhi"
+        },
+        "properties": {
+          "name": "Livio Cerri",
+          "index": 0,
+          "audioSrc":"url(./src/sounds/livio.mp3) ",
+          "audioUrl":"./src/sounds/livio.mp3 ",
+          "description":"Stai ascoltando la testimonizanza<br> di Livio Cerri"
+         }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": {"longitude":9.225134898986664, "latitude": 45.46202538002634},
+          "location":"Mialno Via Longhi"
+        },
+        "properties": {
+          "name": "Su Aurelio Bernuzzi",
+          "index": 1,
+          "audioSrc":"url(./src/sounds/aurelio.mp3) ",
+          "audioUrl":"./src/sounds/aurelio.mp3 ",
+          "description":"Stai ascoltando il racconto <br> di Aurelio Bernuzzi"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": {"longitude":9.225098259592425, "latitude": 45.46077694927979},
+          "location":"Mialno Via Longhi"
+        },
+        "properties": {
+          "name": "La resa di Pavia",
+          "index": 2,
+          "audioSrc":"url(./src/sounds/Panzer.mp3) ",
+          "audioUrl":"./src/sounds/Panzer.mp3",
+          "description":"Stai ascoltando <br> La resa di Pavia"
+        
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": {"longitude":9.15189318166227, "latitude": 45.186088839138925},
+          "location":"Pavia Politeama"
+        },
+        "properties": {
+          "name": "L'impresa del Politeama'",
+          "index": 3,
+          "audioSrc":"url(./src/sounds/Politeama.mp3) ",
+          "audioUrl":"./src/sounds/Politeama.mp3",
+          "description":"Stai ascoltando <br> L'impresa del Politeama'"
+        
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": {"longitude":9.155829006261943, "latitude": 45.18675849849877},
+          "location":"Pavia Università"
+        },
+        "properties": {
+          "name": "La bandiera rossa",
+          "index": 4,
+          "audioSrc":"url(./src/sounds/università.mp3) ",
+          "audioUrl":"./src/sounds/università.mp3",
+          "description":"Stai ascoltando <br> La Bandiera dell'Università"
+        
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": {"longitude":9.162731661918802, "latitude":45.185514792716155},
+          "location":"Mialno Via Longhi"
+        },
+        "properties": {
+          "name": "L'Istituto Botanico'",
+          "index": 2,
+          "audioSrc":"url(./src/sounds/IstitutoBotanico.mp3) ",
+          "audioUrl":"./src/sounds/IstitutoBotanico.mp3",
+          "description":"Stai ascoltando <br> La resistenza all'Istituto Botanico"
+        
+        }
+      }
+
+
+  
+              
+    ]
+  }
+  

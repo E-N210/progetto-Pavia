@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="./jquery-3.6.0.min.js"></script>
+    <!-- JqueryTouchSwipe-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <!-- JqueryLeaflet MAP-->
+    <script src="./Leaflet/leaflet.js"></script>
+
+
+    <link rel="stylesheet" href="./Leaflet/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+
+
+    <!--  IMPORT A-FRAME-->
+    <script src="./aframe.min.js"></script>
+
+    <!--  IMPORT AR.JS GEOLOCATION-->
+    <script type='text/javascript' src='./ar-threex-location-only.js'></script>
+
+    <!--  IMPORT AFRAME-AR -->
+    <script type='text/javascript' src='./aframe-ar.js'></script>
+
+
+
+
+</head>
+<body>
+    <a-scene vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: false; debugUIEnabled: false' renderer='antialias: true; alpha: true' shadow = 'enabled:true; type: basic' id="a-scene">
+        <a-camera id="camera" gps-new-camera='gpsMinDistance: 2' look-controls mouse-cursor  shadow="near: 0.5; far: 50; cast-soft: true">
+            <!--<a-entity cursor="rayOrigin: mouse"></a-entity>-->
+        </a-camera>
+
+
+        <!--PLACEHODLER geometry="primitive: plane" material="color: blue"-->
+        <a-entity id="ambientSound" 
+        sound="src: url(./src/sounds/BELLA_CIAO.mp3); autoplay: true; volume:0; loop:true; rolloffFactor:0"></a-entity>
+
+        <!--PLACEHOLDER geometry="primitive: sphere" material="color: red" -->
+        <a-entity id="speaker" 
+        sound="src: url(./src/sounds/BELLA_CIAO.mp3); autoplay: true; volume:0;rolloffFactor:0"></a-entity>
+
+        <a-entity id="wind" geometry="primitive: cube" material="color: green" 
+        sound="src: url(./src/sounds/wind.mp3); autoplay: true; volume:1;rolloffFactor:0"></a-entity>
+
+    </a-scene>
+
+    <div id="overlay">
+
+
+
+        <div id="interface"class="button2" style="width: max-content; height: max-content; text-align: center; display: flex; flex-direction: column;
+            font-family: sans-serif; margin-bottom:20px; padding-left:30px; padding-right: 30px; padding-bottom: 20px; padding-top: 40px;
+            position: absolute; top:50%;left:50%;transform: translate(-50%,-50%); border-radius: 20px;">
+
+                <div id="again">Ascolta di nuovo</div>
+                <div id="next">Vai al Prossimo</div>
+  
+        </div>
+
+        <div id="taleDescription" class="button2" style="width: max-content; height: max-content; text-align: center; display: flex; flex-direction: column;
+        font-family: sans-serif; margin-bottom:20px; padding-left:30px; padding-right: 30px; padding-bottom: 20px; padding-top:20px;
+        position: absolute; top:50%;left:50%;transform: translate(-50%,-50%);"></div>
+        
+        <div id="songIndicator"  class="interface">Segui il canto di libertà <br>
+            <div id="dismiss"> Ho capito</div>
+        </div>
+
+
+        <div id="distanceIndicator" class="button" style="width: max-content; height: min-content; text-align: center; display: flex; flex-direction: column;
+             font-family: sans-serif; margin-bottom:20px" 
+    
+        > distanza dal prossimo racconto :</div>
+
+        <div class="top-right-Container">
+
+            <button id="about" class="button" onclick="window.open('about.html', '_blank')">
+
+                <img src="./src/imgs/info-icon.svg" alt="">
+             </button>
+
+            <button id="trouble" class="button" onclick="window.open('trouble.html', '_blank')">
+
+                <img src="./src/imgs/help-icon.svg" alt="">
+             </button>
+
+
+            <button id="goToMap" class="button" onclick="window.open('map.html', '_blank')">
+
+                <img src="./src/imgs/map-icon.svg" alt="">
+             </button>
+
+        </div>
+
+        <div class="bottomContainer">
+
+
+        <div class="button" style="width: max-content; height: min-content; text-align: center; display: flex; flex-direction: column;
+        padding-left: 20px; padding-right: 20px; font-family: sans-serif; gap:2px; padding-bottom: 10px; padding-top: 10px;" 
+        id="accuracyIndicator">
+            <p style="margin: 0px;">Your GPS position is inaccurate</p>
+            <p style="font-weight: 100; margin: 0px;">this might lead to misplaced directions</p></div>
+
+
+
+
+
+    
+
+
+        </div>
+    </div>
+
+
+    <!--  IMPORT SCRIPT -->
+<script type='text/javascript' src='./script.js'></script>
+
+<script>
+
+setInterval(toBeRepeated,500)
+
+let myCamera = document.querySelector("[gps-new-camera]");
+
+myCamera.addEventListener('camera-init', () => {
+    console.log('AR.js camera initialized successfully!');
+});
+
+myCamera.addEventListener('camera-error', (error) => {
+    console.log('AR.js camera failed to initialize:', error.detail);
+    //alert(error)
+});
+
+
+</script>
+</body>
+</html>

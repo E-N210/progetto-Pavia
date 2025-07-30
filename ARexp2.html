@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="./jquery-3.6.0.min.js"></script>
+    <!-- JqueryTouchSwipe-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <!-- JqueryLeaflet MAP-->
+    <script src="./Leaflet/leaflet.js"></script>
+
+
+    <link rel="stylesheet" href="./Leaflet/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+
+
+
+
+</head>
+<body>
+
+    <audio id="ambientSound" src="./src/sounds/BELLA_CIAO.mp3"></audio>
+    <audio id="speaker"src=""></audio>
+    
+    <div id="overlay">
+
+
+
+        <div id="interface" style="width: max-content; height: max-content; text-align: center; display: flex; flex-direction: column;
+            font-family: sans-serif; margin-bottom:20px; padding-left:30px; padding-right: 30px; padding-bottom: 20px; padding-top: 40px;
+            position: absolute; top:50%;left:50%;transform: translate(-50%,-50%); border-radius: 20px;color:#972747;
+            font-family: sans-serif;    text-align: center; font-weight: bold; font-size: 1.5em; text-decoration: underline; gap:30px">
+
+                <div id="again">Ascolta di nuovo</div>
+                <div id="next">Vai al Prossimo</div>
+  
+        </div>
+
+        <div id="taleDescription" style="width: max-content; height: max-content; max-width: 80vw;text-align: center; display: flex; flex-direction: column;
+            font-family: sans-serif; margin-bottom:20px; padding-left:30px; padding-right: 30px; padding-bottom: 20px; padding-top:20px;
+            position: absolute; top:50%;left:50%;transform: translate(-50%,-50%);color:#972747;
+            font-family: sans-serif;    text-align: center; font-weight: bold; font-size: 2em;">
+         
+    
+        </div>
+        
+        <div id="songIndicator"  class="interface">Segui il canto di libertà <br>
+            <div id="dismiss"> Ho capito</div>
+        </div>
+
+
+        <div id="distanceIndicator" style="width: max-content; height: min-content; text-align: center; display: flex; flex-direction: column;
+             font-family: sans-serif; margin-bottom:20px"> distanza dal prossimo racconto :
+        </div>
+
+        <div class="top-right-Container">
+
+            <button id="about" class="button" onclick="window.open('index.html')">
+
+                <img src="./src/imgs/info-icon.svg" alt="">
+             </button>
+
+            <button id="trouble" class="button" onclick="window.open('trouble.html')">
+
+                <img src="./src/imgs/help-icon.svg" alt="">
+             </button>
+
+
+            <button id="goToMap" class="button" onclick="window.open('map.html')">
+
+                <img src="./src/imgs/map-icon.svg" alt="">
+             </button>
+
+             <button id="mute"  class="button" >
+
+                <img src="./src/imgs/audio.svg" alt="">
+             </button>
+
+
+             <button id="unMute"style="display: none;" class="button">
+
+                <img src="./src/imgs/mute.svg" alt="">
+             </button>
+
+        </div>
+
+        <div class="bottomContainer">
+
+
+            <div class="button" style="width: max-content; height: min-content; text-align: center; display: flex; flex-direction: column;
+                padding-left: 20px; padding-right: 20px; font-family: sans-serif; gap:2px; padding-bottom: 10px; padding-top: 10px;" 
+                id="accuracyIndicator">
+                    <p style="margin: 0px;">Your GPS position is inaccurate</p>
+                <p style="font-weight: 100; margin: 0px;">this might lead to misplaced directions</p>
+            </div>
+        </div>
+
+        <div id="startButton">
+            <div
+                class="button" style="width:300px; height:300px; 
+            position: absolute; top:50%;left:50%;transform: translate(-50%,-50%);">
+            <img src="./src/imgs/play.svg" alt="" style="width:150px;height: 150px;">
+            </div>
+            <h2 style="padding-bottom: 50px; position: absolute; top:100%; left:0%; max-width:80%; transform: translate(0,-120%);">Questa pagina ti guiderà alla scoperta dei racconti sparsi per la città</h2>
+        </div> 
+        </div>
+
+
+
+    <div id="spinner">
+        <div id="mainCircle"></div>
+        <div id="extCircle1"></div>
+        <div id="extCircle2"></div>
+        <div id="extCircle3"></div>
+    </div>
+        
+
+
+    </div>
+
+
+    <!--  IMPORT SCRIPT -->
+<script type='text/javascript' src='./script2.js'></script>
+
+<script>
+
+let bottomContainer= document.getElementById("bottomContainer")
+let distanceIndicator = document.getElementById("distanceIndicator")
+
+
+let startButton=document.getElementById("startButton")
+
+
+
+    distanceIndicator.style.display="none"
+    accuracyIndicator.style.display="none"
+
+
+
+startButton.addEventListener("click", ()=>{
+    start=1
+    startButton.style.display= "none"
+
+
+    distanceIndicator.style.display="flex"
+    accuracyIndicator.style.display="flex"
+    setInterval(toBeRepeated,2000)
+
+    console.log(start)
+})
+
+
+
+
+</script>
+</body>
+</html>

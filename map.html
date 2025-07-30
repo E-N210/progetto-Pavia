@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="./jquery-3.6.0.min.js"></script>
+    <!-- JqueryTouchSwipe-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <!-- JqueryLeaflet MAP-->
+    <script src="./Leaflet/leaflet.js"></script>
+
+    <link rel="stylesheet" href="./Leaflet/leaflet.css" />
+
+
+    <!--  IMPORT A-FRAME-->
+    <script src="./aframe.min.js"></script>
+
+    <!--  IMPORT AR.JS GEOLOCATION-->
+    <script type='text/javascript' src='./ar-threex-location-only.js'></script>
+
+    <!--  IMPORT AFRAME-AR -->
+    <script type='text/javascript' src='./aframe-ar.js'></script>
+
+
+</head>
+
+<style>
+    body{margin:0px}
+    #map{
+        width: 100vw ;height:100vh;margin:0px
+    }
+</style>
+<body>
+<div id="map"></div>
+
+<script type='text/javascript' src='./script.js'></script>
+
+<script>
+    
+    var customIcon = L.icon({
+        iconUrl: './src/imgs/map-pointer.svg', // Path to your custom icon image
+        iconSize: [38, 38], // Size of the icon [width, height]
+        iconAnchor: [19, 38], // Anchor point [x, y], where the icon is "attached" on the map
+        popupAnchor: [0, -38] // Popup anchor point relative to the icon
+    });
+    
+
+    getData().then(()=>{
+        getGPSPosition().then(()=>{
+            console.log(lat)
+
+            var map = L.map('map', {
+                center: [45.18675849849877, 9.155829006261943],
+                zoom: 15
+            });
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+
+            for(var i=0;i<pois.features.length;i++){
+                console.log(i)
+                L.marker([pois.features[i].geometry.coordinates.latitude, 
+                    pois.features[i].geometry.coordinates.longitude], {icon: customIcon}).addTo(map).bindPopup(
+                    `
+                        <div>
+                            <h3>${pois.features[i].properties.name}</h3>
+                        <audio controls>
+                            <source src="${pois.features[i].properties.audioUrl}" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+        </div>
+    `
+                )
+            }
+        })
+
+    })
+
+</script>
+</body>
+</html>

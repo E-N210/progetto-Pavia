@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Document</title>
+</head>
+<body style="display: flex;
+    flex-direction: column; height: 100vh; align-items: center;
+    gap:30px">
+
+
+    <h1 style="flex-grow: 1;">La Resistenza dei Luoghi<br> della città di Pavia</h1>
+
+
+
+    <img style="width:60vw; max-width: 150px;"src="./src/imgs/flower.svg" alt="">
+
+    <div id="textContainer" style="
+            width:80%; max-width: 600px;
+             padding-top: 50px;
+            font-size: 1rem;
+            font-family: monospace;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            gap:20px; align-items: center;
+            padding-bottom: 200px;
+
+        ">
+
+        <h2>Esplora gli episodi della resistenza all'interno della città di Pavia</h2>
+    
+        <p><h2>il progetto:</h2> 
+            Il progetto “La Resistenza nei Luoghi della città di Pavia” consiste nell’offrire alla cittadinanza e ai visitatori una mappa dei luoghi fisici teatro della Resistenza in Pavia.  L’utente, una volta raggiunti questi siti, attraverso una mappa cartacea o scaricabile sul cellulare, potrà ascoltare la storia dell’evento e dei personaggi coinvolti mediante un’applicazione anche essa scaricabile da smartphone. 
+        </p>
+
+
+        <p><h2>La ricerca storica</h2> 
+            La ricerca storica degli eventi da inserire nella mappa sarà realizzata in larga misura dagli studi del prof. Giulio Guderzo confluiti nel libro “L’altra guerra” edito dal Mulino.
+
+        </p>
+
+
+        <p><h2>Gli obiettivi</h2>
+            L’obiettivo di questo progetto è di costruire un museo fisico, permanente e partecipato della Resistenza. Un museo che quindi “vive” nella città come un eterno presente al pari di Ponte Vecchio, della Cattedrale di S.Stefano e Santa Maria Assunta. Cioè pensare alla Resistenza come una architettura della città di Pavia. Una architettura le cui pietre sono date dal connubio tra ricerca storica, fare artistico e moderne tecnologie. 
+            </p>
+        
+        
+        <p><h2>L'esperienza digitale</h2>
+            Il progetto digitale è composto da due parti: una mappa statica e un’esperienza interattiva in realtà aumentata.
+        </p>
+    
+        <p>
+            Tramite la mappa navigabile potrete esplorare la cartina della città e ascoltare le diverse testimonianze, ciascuna collegata al luogo interessato.
+        </p>
+
+
+           
+        <p>
+            Nell’esperienza in realtà aumentata verrete guidati da una musica, tramite il GPS, verso il luogo fisico dove si sono svolti gli eventi interessati e ascoltare le varie testimonianze nel luogo preciso in cui si sono svolti gli eventi della resistenza pavese.
+        </p>
+
+
+    </div>
+    
+    <div id="buttonContainer" 
+    style="position: fixed; top:100% ; transform:translate(0,-100%);
+     background-color:white; width:100%;
+     display: flex; flex-direction: column; align-items: center;
+     padding-top: 20px; padding-bottom: 20px;gap:10px">
+
+        <button id="map" class="button1" onclick="window.open('ARexp2.html', '_blank')"
+            style="width:60vw">
+            <img src="./src/imgs/audio.svg" alt="">Audioguida    
+        </button>
+
+
+        <button id="map" class="button1" onclick="window.open('map.html', '_blank')"
+            style="width:60vw">
+            <img src="./src/imgs/map-icon.svg" alt="">Mappa Interattiva     
+        </button>
+    
+    </div>
+    
+    
+</body>
+</html>
